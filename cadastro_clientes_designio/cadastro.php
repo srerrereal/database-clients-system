@@ -1,7 +1,7 @@
 <html>
 	<head>
 	<meta> http-equiv="Content-Type" content="text/html; charset=iso-8859-1"
-	<title><b>Cadastro realizado com sucesso! Obrigado.</b></title>
+	<title><b>Register has been sucessful completed! Thank You.</b></title>
 	</head>
 		<body>
 			<?php
@@ -20,11 +20,11 @@
 
 			$conect = mysql_connect("localhost", "root");
 			if (!$conect)
-				die ("Erro ao se conectar com o Servidor:" .mysql_error());
+				die ("Error connecting to the server" .mysql_error());
 
 			$dbank = mysql_select_db("cadastro", $conect);
 				if (!$dbank)
-					die("Erro ao se conectar com o Banco de Dados" .mysql_error());
+					die("Failed to connect with the database" .mysql_error());
 
 			$query = "INSERT INTO 'cadastro' ('name', 'email', 'nascimento', 'cep', 'endereco'
 			'cidade',  'estado', 'telefone', 'celular')	
